@@ -1,1 +1,64 @@
-<p>navbar works!</p>
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand">Movies</a>
+      <button class="navbar-toggler" type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#navbarSupportedContent" 
+      aria-controls="navbarSupportedContent" 
+      aria-expanded="false" 
+      aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/"><i class="bi bi-house"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/feedback"><i class="bi bi-chat-dots"></i> Feedback</a>
+          </li>
+         
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="searchMovieTitle" name="searchMovieTitle">
+          <button class="btn btn-outline-success" type="button" 
+           [routerLink]="['/search/'+searchMovieTitle]">Search</button> 
+          
+        </form>
+        <div class="d-flex">
+          <button class="btn btn-outline-primary" *ngIf="!(auth.isAuthenticated$ | async); else logOutButton  " (click)="auth.loginWithPopup()"> <i class="bi bi-box-arrow-in-right"></i>Log in</button>
+          <ng-template #logOutButton>
+            <div class="btn-group btn-logout">
+
+
+              <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="true">
+                <img src="{{loggedInUser.picture}}"  class="round-circle" height="30" width="30" alt="Profile picture"/>
+              </button>
+
+
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a class="dropdown-item">
+                    <span *ngIf="loggedInUser.name"><b><i class="bi bi-person"></i>{{loggedInUser.name}}</b></span>
+                    <br>
+                    <span *ngIf="loggedInUser.email"><b><i class="bi bi-envelope"></i>{{loggedInUser.email}}</b></span>
+                  </a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li>
+                  <button class="dropdown-item logout" (click)="auth.logout()"><i class="bi bi-box-arrow-left"></i>Log out</button>
+                </li>
+              </ul>
+
+
+
+            </div>
+            <!-- <button class="btn btn-outline-danger" *ngIf="auth.isAuthenticated$ | async " (click)="auth.logout()"> Log out</button> -->
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </nav>

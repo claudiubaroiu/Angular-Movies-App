@@ -1,0 +1,28 @@
+[
+    {
+      "imageUrl": "images/jokergood.png",
+      "title": "UJoker",
+      "rate": "9"
+    },
+    {
+      "imageUrl": "images/divergent.png",
+      "title": "Divergent",
+      "rate": "4"
+    },
+    {
+      "imageUrl": "images/JohnWick1.png",
+      "title": "John Wick",
+      "rate": "8"
+    },
+    {
+      "imageUrl": "images/Oppenheimer.png",
+      "title": "Oppenheimer",
+      "rate": "9.5"
+    },
+    {
+      "imageUrl": "images/venom.png",
+      "title": "Venom",
+      "rate": "6.5"
+    }
+  ]
+  

@@ -1,1 +1,10 @@
-<p>details-movies works!</p>
+<figure class="figure" *ngFor="let movie of movies;let id=index" [routerLink]="['/details/',id+1]">
+    <img [src]="movie.imageUrl" width="310" height="310" 
+    class="figure-img img-fluid rounded img-thumbnail" 
+    alt="..."
+    style="max-width: 225px; max-height: 350px;">
+    <figcaption class="figure-caption">{{movie.title}}</figcaption>
+    <figcaption class="figure-caption"><i class="bi bi-star"><b>{{movie.rate}}/10</b></i></figcaption>
+  </figure>
+
+ 

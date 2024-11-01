@@ -1,3 +1,103 @@
-<p>details works!</p>
-<app-details-movies></app-details-movies>
-<app-details-reviews></app-details-reviews>
+<h1>Hitman</h1>
+
+<br>
+
+<div class="row">
+    <!-- Trailer  -->
+    <div class="col-md-6">
+        <iframe 
+        width="540" 
+        height="360" 
+        src="https://www.youtube.com/embed/alQlJDRnQkE?si=mEZFPgUPN6db-0hd"  
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+    </iframe>
+    </div>
+    <!-- Description label -->
+    <div class="col-md-6">
+        <p class="lead">HITMAN: AGENT 47 centers on an elite assassin who was genetically engineered from conception to be the perfect killing machine, and is known only by the last two digits on the barcode tattooed on the back of his neck. He is the culmination of decades of research and forty-six earlier Agent clones -- endowing him with unprecedented strength, speed, stamina and intelligence. His latest target is a mega-corporation that plans to unlock the secret of Agent 47's past to create an army of killers whose powers surpass even his own. Teaming up with a young woman who may hold the secret to overcoming their powerful and clandestine enemies, 47 confronts stunning revelations about his own origins and squares off in an epic battle with his deadliest foe.</p>
+        <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">Stars</div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" *ngFor="let star of stars">{{star}}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">Directors</div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" *ngFor="let director of directors">{{director}}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">Genre</div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" *ngFor="let genre of genres">{{genre}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</div>
+
+<hr>
+<br>
+
+<div class="row">
+    <h1>Actors</h1>
+    <br>
+    <div class="col-md-12 text-center">
+        <app-app-details-actors></app-app-details-actors>
+    </div>
+
+
+    <div class="text-center">
+        <a class="btn btn-warning" 
+        [routerLink]="['/details/actors/'+movieId]">View more</a>
+    </div>
+
+</div>
+<hr>
+<br>
+
+<div class="row">
+    <h1>Reviews</h1>
+    <br>
+    <div class="col-md-12">
+        <app-details-reviews></app-details-reviews>
+    </div>
+
+    <div class="text-center">
+        <a class="btn btn-warning" 
+        [routerLink]="['/details/reviews/'+movieId]"
+        >View more</a>
+    </div>
+
+</div>
+
+
+<hr>
+<br>
+
+
+<div class="row">
+    <h1>Similar Movies</h1>
+    <br>
+    <div class="col-md-12 text-center">
+        <app-details-movies></app-details-movies>
+    </div>
+
+    <div class="text-center">
+        <a class="btn btn-warning" [routerLink]="['/details/movies/'+movieId]" name="movieId">View more</a>
+    </div>
+
+</div>

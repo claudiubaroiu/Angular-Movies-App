@@ -1,0 +1,34 @@
+[
+    {
+        "imageUrl": "images/actor1.png",
+        "name": "Rupert Friend",
+        "role":"Agent 47"
+
+      },
+      {
+        "imageUrl": "images/actor2.png",
+        "name": "Hannah Ware",
+        "role":"Katia"
+      
+      }
+,{
+    "imageUrl": "images/actor3.png",
+    "name": "Zachary Quinto",
+    "role":"John Smith"
+  }
+,{
+    "imageUrl": "images/actor4.png",
+    "name": "Ciaran Hinds",
+    "role":"Litvenko"
+  }
+,{
+    "imageUrl": "images/actor5.png",
+    "name": "Angelababy",
+    "role":"Diana"
+  }
+,{
+    "imageUrl": "images/actor6.png",
+    "name": "Dan Bakkedahl",
+    "role":"Sanders"
+  }
+]

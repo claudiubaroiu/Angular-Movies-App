@@ -1,0 +1,23 @@
+[
+  {
+    "imageUrl":"images/hitman.png",
+    "cardTitle":"Hitman",
+    "description":"A gun-for-hire known only as Agent 47 hired... ",
+    "lastUpdate":"Last update 5 minutes ago",
+    "trailer":"Trailer"
+  },
+  {
+   "imageUrl":"images/divergent.png",
+    "cardTitle":"Divergent",
+    "description":"In a world divided by factions based on virtues, Tris learns... ",
+    "lastUpdate":"Last update 5 minutes ago",
+    "trailer":"Trailer"
+  },
+  {
+   "imageUrl":"images/venom.png",
+    "cardTitle":"Venom",
+    "description":"A failed reporter is bonded to an alien entity, one of many ...",
+    "lastUpdate":"Last update 5 minutes ago",
+    "trailer":"Trailer"
+  }
+]
